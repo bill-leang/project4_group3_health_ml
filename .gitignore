@@ -1,3 +1,5 @@
 
 starter.ipynb
 starter.py
+.DS_Store
+.ipynb_checkpoints/*

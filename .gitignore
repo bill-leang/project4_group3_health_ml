@@ -17,3 +17,6 @@ templates/learn.html
 templates/login.html
 testapp.py
 applearn.py
+Jun Trial/heart_explore random forest 1 standard.ipynb
+Jun Trial/model_noScale.pkl
+Jun Trial/model_pkl

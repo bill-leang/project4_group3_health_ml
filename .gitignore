@@ -16,3 +16,4 @@ templates/extendBase.html
 templates/learn.html
 templates/login.html
 testapp.py
+applearn.py

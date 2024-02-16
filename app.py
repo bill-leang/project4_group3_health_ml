@@ -14,7 +14,6 @@ def login():
     # get the value nm from login.html
     # age = request.form["ageText"]
     # age =request.form.ageText.data
-    # age = 23
     age = request.form.get('ageText')
     # print(age)
     # session['exerciseHr'] = request.form["exerciseHr"]

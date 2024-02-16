@@ -9,3 +9,10 @@ __pycache__/testapp.cpython-311.pyc
 venv/Lib/site-packages/pip-23.2.1.dist-info/AUTHORS.txt
 venv/Lib/site-packages/pip-23.2.1.dist-info/entry_points.txt
 venv/*
+img/heart.svg
+img/heart.webp
+templates/base.html
+templates/extendBase.html
+templates/learn.html
+templates/login.html
+testapp.py

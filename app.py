@@ -40,6 +40,7 @@ def prediction():
     if "Age" in session:
        df = preprocess(session)
        prediction = predict(df)
+       print(prediction)
        return render_template('/predict.html', prediction = prediction )
     else:
        # if there's no session return to input page
@@ -47,10 +48,11 @@ def prediction():
 
 # load the model from pkl and make prediction
 def predict(df ):
-  with open('model_noScale.pkl', 'rb') as f:
+  with open(r'OC Trial\model_pkl', 'rb') as f:
     rf = pickle.load(f)
-
-  return rf.predict(df)
+    predictions = rf.predict_proba(df)
+    prediction_threshold = (predictions [:,1] >= 0.47).astype('int')
+  return prediction_threshold
 
 # this is needed for Flask
 if __name__== '__main__':

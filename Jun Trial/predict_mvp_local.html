@@ -8,18 +8,16 @@
     <div class="testbox1">
       <form action="/prediction" method="POST" target="_blank">
         <div class="banner">
-          <h1 style="text-align: center;">Prediction Result</h1>
+          <h1>Prediction Result</h1>
         </div>
-        <h3 style="text-align: center;"> From the information given, your heart prediction is: </h3>
+        <h2 style="text-align: center;"> Given the information on the form, your heart prediction is following: </h2>
 
         <div class="prediction_res">
           <div class="thumbnail">
             <!-- This part only shows if prediction is 0 -->
             {% if prediction [0]== 0 %}
-            <h2 style="text-align: center;">Healthy</h2>
-            <div style="text-align: center;">
-              <img src="static/images/happy_heart.png" class="emoji">
-            </div>
+            <h3>Healthy</h3>
+            <img src="static/images/happy_heart.png" class="emoji" />
             <div class = "recomendations">
               <h2 style="text-align: center;" class= "recom">You Are Doing Great!</h2>
               <h2 style="text-align: center;" class= "recom">Keep Up!</h2>
@@ -29,10 +27,8 @@
           <div class="thumbnail">
             <!-- This part only shows if prediction is 1 -->
             {% if prediction[0] == 1 %}
-            <h2 style="text-align: center;">Unhealthy</h2>
-            <div style="text-align: center;">
-              <img src="static/images/sad_heart.png" class="emoji">
-            </div>
+            <h3>Unhealthy</h3>
+            <img src="static/images/sad_heart.png" class="emoji" />
             <div class = "recomendations">
                 <h2 style="text-align: center;" class= "recom">You Are Doing Not so good!</h2>
                 <h2 style="text-align: center;" class= "recom">Take care of your heart!</h2>
@@ -40,15 +36,13 @@
             {% endif %}
           </div>
           <div class = "recomendations">
-            <!-- <h2 style="text-align: center;" class= "recom">Heart Visualizations</h2> -->
-            <div style="text-align: center;">
+            <h2 class= "recom">Hearty Visualizations</h2>
             <ul>
-              <li><img  src="static/images/Global Map View.png" alt="Embedded PNG Image" width="1200", height="700"></li>
-              <li><img src="static/images/Continent.png" alt="Embedded PNG Image" width="1200", height="700"></li>
-             <li><img  src="static/images/Genderview.png" alt="Embedded PNG Image" width="1200", height="700"></li>
-              
+              <li>Viz 1</li>
+              <li>Viz 2</li>
+              <li>Viz 3</li>
+              <li>Viz 4</li>
             </ul>
-            </div>
           </div>
         </div>
       </form>

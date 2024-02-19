@@ -47,7 +47,7 @@ def prediction():
 
 # load the model from pkl and make prediction
 def predict(df ):
-  with open('model_noScale.pkl', 'rb') as f:
+  with open('./model_noScale.pkl', 'rb') as f:
     rf = pickle.load(f)
 
   return rf.predict(df)

@@ -47,10 +47,12 @@ def prediction():
 
 # load the model from pkl and make prediction
 def predict(df ):
-  with open('model_noScale.pkl', 'rb') as f:
+  with open(r'..\OC Trial\model_pkl', 'rb') as f:
     rf = pickle.load(f)
+    predictions = rf.predict_proba(df)
+    prediction_threshold = (predictions [:,1] >= 0.47).astype('int')
+  return prediction_threshold
 
-  return rf.predict(df)
 
 # this is needed for Flask
 if __name__== '__main__':
